@@ -1,0 +1,41 @@
+{
+  "name": "dJSON",
+  "version": "0.1.0",
+  "description": "Dynamic JSON modification tookit",
+  "main": "lib/dJSON.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "lodash": "^2.4.1",
+    "underscore.string": "^2.3.3"
+  },
+  "devDependencies": {
+    "chai": "^1.9.2",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-docker": "^0.0.8",
+    "grunt-mocha-test": "^0.12.2",
+    "grunt-open": "^0.2.3",
+    "matchdep": "^0.3.0",
+    "mocha": "^2.0.1"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bsander/dJSON.git"
+  },
+  "keywords": [
+    "json",
+    "dynamic"
+  ],
+  "author": "Sander Bouwhuis <sander@enrise.com> (https://github.com/bsander)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bsander/dJSON/issues"
+  },
+  "homepage": "https://github.com/bsander/dJSON"
+}
