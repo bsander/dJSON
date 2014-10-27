@@ -1,5 +1,5 @@
 {
-  "name": "dJSON",
+  "name": "djson",
   "version": "0.1.0",
   "description": "Dynamic JSON modification tookit",
   "main": "lib/dJSON.js",
@@ -32,7 +32,7 @@
     "json",
     "dynamic"
   ],
-  "author": "Sander Bouwhuis <sander@enrise.com> (https://github.com/bsander)",
+  "author": "Sander Bouwhuis <sanderb@gmail.com> (https://github.com/bsander)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bsander/dJSON/issues"
