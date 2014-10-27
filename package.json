@@ -1,6 +1,6 @@
 {
   "name": "djson",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Dynamic JSON modification tookit",
   "main": "lib/dJSON.js",
   "directories": {
