@@ -34,6 +34,28 @@ describe('dJSON', function () {
     expect(dJSON.get(obj, 'x.y.q.r.z')).to.equal(1);
   });
 
+  it('does not create an object when a path exists as empty string', function () {
+    var newObj = {
+      nestedObject: {
+        anArray: [
+          'i have a value',
+          ''
+        ]
+      }
+    };
+    var newPath = 'nestedObject.anArray[1]';
+
+    dJSON.set(newObj, newPath, 17771);
+    expect(newObj).to.deep.equal({
+      nestedObject: {
+        anArray: [
+          'i have a value',
+          17771
+        ]
+      }
+    });
+  });
+
   it('creates an object from a path with a left curly brace', function () {
     var newObj = {};
 
