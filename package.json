@@ -1,24 +1,24 @@
 {
   "name": "djson",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Dynamic JSON modification tookit",
   "main": "lib/dJSON.js",
   "directories": {
     "test": "test"
   },
   "dependencies": {
-    "lodash": "^2.4.1",
-    "underscore.string": "^2.3.3"
+    "lodash": "^4.0.0",
+    "underscore.string": "^3.2.3"
   },
   "devDependencies": {
-    "chai": "^1.9.2",
+    "chai": "^3.4.1",
     "grunt": "^0.4.5",
-    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-jshint": "^0.12.0",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-docker": "^0.0.8",
+    "grunt-docker": "0.0.10",
     "grunt-mocha-test": "^0.12.2",
     "grunt-open": "^0.2.3",
-    "matchdep": "^0.3.0",
+    "matchdep": "^1.0.0",
     "mocha": "^2.0.1"
   },
   "scripts": {
