@@ -1,13 +1,13 @@
 {
   "name": "djson",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Dynamic JSON modification tookit",
   "main": "lib/dJSON.js",
   "directories": {
     "test": "test"
   },
   "dependencies": {
-    "lodash": "^4.0.0",
+    "lodash": "^4.1.0",
     "underscore.string": "^3.2.3"
   },
   "devDependencies": {
