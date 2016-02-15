@@ -1,6 +1,6 @@
-'use strict';
-
 describe('dJSON', function () {
+  'use strict';
+
   var chai = require('chai');
   var expect = chai.expect;
 
@@ -21,7 +21,8 @@ describe('dJSON', function () {
             }
           }
         }
-      }
+      },
+      'x-y': 5
     };
   });
   it('gets a value from an object with a path containing properties which contain a period', function () {
