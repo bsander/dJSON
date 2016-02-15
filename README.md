@@ -65,5 +65,17 @@ djson.get(demo, 'with-dash'); // is the same as demo.with-dash and will resolve 
 djson.get(demo, '["with-dash"]'); // ==> 'foo'
 ```
 
+### Dynamic creation of arrays is not supported
+Dynamic creation of arrays is not supported at the moment.
+
+#### Example:
+```Javascript
+var djson = require('djson');
+var demo = {};
+
+djson.set(demo, 'foo.bar[0].lorem', 'ipsum'); // is the same as demo.with-dash and will resolve to `undefined`
+console.log(demo);  // ==> { foo: { bar: { 0: { lorem: 'ipsum' } } } }
+```
+
 ## Todo
 - Cleanup
