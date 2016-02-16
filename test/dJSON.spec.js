@@ -1,5 +1,6 @@
 describe('dJSON', function () {
   'use strict';
+
   var chai = require('chai');
   var expect = chai.expect;
 
@@ -20,7 +21,8 @@ describe('dJSON', function () {
             }
           }
         }
-      }
+      },
+      'x-y': 5
     };
   });
   it('gets a value from an object with a path containing properties which contain a period', function () {
@@ -32,6 +34,14 @@ describe('dJSON', function () {
     dJSON.set(obj, path, 17771);
     expect(dJSON.get(obj, path)).to.equal(17771);
     expect(dJSON.get(obj, 'x.y.q.r.z')).to.equal(1);
+  });
+
+  it('will return undefined when requesting a property with a dash directly', function () {
+    expect(dJSON.get(obj, 'x-y')).to.be.undefined;
+  });
+
+  it('will return the proper value when requesting a property with a dash by square bracket notation', function () {
+    expect(dJSON.get(obj, '["x-y"]')).to.equal(5);
   });
 
   it('does not create an object when a path exists as empty string', function () {
