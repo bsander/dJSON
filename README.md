@@ -42,7 +42,7 @@ values in an object. If `path` does not exist it's created.
 var djson = require('djson');
 var demo = {};
 
-djson.get(demo, 'foo.bar.lorem.ipsum', 'dolor sit amet');
+djson.set(demo, 'foo.bar.lorem.ipsum', 'dolor sit amet');
 console.log(demo.foo.bar.lorem.ipsum); // ==> 'dolor sit amet'
 ```
 
