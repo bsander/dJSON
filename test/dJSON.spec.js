@@ -22,7 +22,8 @@ describe('dJSON', function () {
           }
         }
       },
-      'x-y': 5
+      'x-y': 5,
+      falsy: false
     };
   });
   it('gets a value from an object with a path containing properties which contain a period', function () {
@@ -42,6 +43,27 @@ describe('dJSON', function () {
 
   it('will return the proper value when requesting a property with a dash by square bracket notation', function () {
     expect(dJSON.get(obj, '["x-y"]')).to.equal(5);
+  });
+
+  it('returns a value that is falsy', function () {
+    expect(dJSON.get(obj, 'falsy')).to.equal(false);
+  });
+
+  it('sets a value that is falsy', function () {
+    dJSON.set(obj, 'new', false);
+    expect(dJSON.get(obj, 'new')).to.equal(false);
+  });
+
+  it('uses an empty object as default for the value in the set method', function () {
+    var newObj = {};
+    dJSON.set(newObj, 'foo.bar.lorem');
+    expect(newObj).to.deep.equal({
+      foo: {
+        bar: {
+          lorem: {}
+        }
+      }
+    });
   });
 
   it('does not create an object when a path exists as empty string', function () {
