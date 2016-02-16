@@ -42,8 +42,8 @@ values in an object. If `path` does not exist it's created.
 var djson = require('djson');
 var demo = {};
 
-djson.get(demo, 'foo.bar[0].lorem.ipsum', 'dolor sit amet');
-console.log(demo.foo.bar[0].lorem.ipsum); // ==> 'dolor sit amet'
+djson.get(demo, 'foo.bar.lorem.ipsum', 'dolor sit amet');
+console.log(demo.foo.bar.lorem.ipsum); // ==> 'dolor sit amet'
 ```
 
 ## Pitfalls
@@ -63,6 +63,18 @@ var demo = {
 
 djson.get(demo, 'with-dash'); // is the same as demo.with-dash and will resolve to `undefined`
 djson.get(demo, '["with-dash"]'); // ==> 'foo'
+```
+
+### Dynamic creation of arrays is not supported
+Dynamic creation of arrays is not supported at the moment.
+
+#### Example:
+```Javascript
+var djson = require('djson');
+var demo = {};
+
+djson.set(demo, 'foo.bar[0].lorem', 'ipsum'); // is the same as demo.with-dash and will resolve to `undefined`
+console.log(demo);  // ==> { foo: { bar: { 0: { lorem: 'ipsum' } } } }
 ```
 
 ## Todo
